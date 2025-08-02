@@ -842,6 +842,11 @@
             color: #10b981;
         }
         
+        .status.accepted {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
         .status.rejected {
             background: #fef2f2;
             color: #ef4444;
@@ -1181,6 +1186,27 @@
             width: 15px;
             height: 15px;
             border-radius: 3px;
+        }
+        
+        /* ???? ??????? */
+        .company-filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-option {
+            padding: 8px 15px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-option.active {
+            background: var(--primary);
+            color: white;
         }
         
         @media (max-width: 768px) {
@@ -1528,7 +1554,7 @@
                 
                 <div class="form-group full">
                     <label><i class="fas fa-edit"></i> ???????</label>
-                    <textarea rows="3" placeholder="?????? ?? ?????? ????????..."></textarea>
+                    <textarea rows="3" placeholder="?????? ?? ?????? ????????..." id="notes"></textarea>
                 </div>
                 
                 <div class="form-group full">
@@ -1605,114 +1631,41 @@
             <div class="stats-cards">
                 <div class="stat-card">
                     <h3>?????? ?????????</h3>
-                    <div class="value">34</div>
+                    <div class="value" id="totalApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +18% ?? ??????? ??????</div>
                 </div>
                 
                 <div class="stat-card concentrix">
                     <h3>?????? Concentrix</h3>
-                    <div class="value">12</div>
+                    <div class="value" id="concentrixApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +8% ?? ??????? ??????</div>
                 </div>
                 
                 <div class="stat-card hsbc">
                     <h3>?????? HSBC</h3>
-                    <div class="value">6</div>
+                    <div class="value" id="hsbcApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-down"></i> -3% ?? ??????? ??????</div>
                 </div>
                 
                 <div class="stat-card volumex">
                     <h3>?????? Volume X</h3>
-                    <div class="value">6</div>
+                    <div class="value" id="volumexApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +22% ?? ??????? ??????</div>
                 </div>
                 
                 <div class="stat-card real-estate">
                     <h3>?????? ????????</h3>
-                    <div class="value">10</div>
+                    <div class="value" id="realEstateApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +150% ?? ??????? ??????</div>
                 </div>
             </div>
             
-            <!-- ?????? ???????? -->
-            <div class="chart-container">
-                <div class="chart-header">
-                    <h3><i class="fas fa-chart-bar"></i> ???????? ?????????</h3>
-                </div>
-                
-                <div class="chart-wrapper">
-                    <div class="chart-box">
-                        <div class="chart-title">??????? ?????? ?????</div>
-                        <div class="chart" id="popularJobsChart">
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 80%; background-color: var(--concentrix);"></div>
-                                <div class="bar-label">???? ???????</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 60%; background-color: var(--hsbc);"></div>
-                                <div class="bar-label">???? ???????</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 90%; background-color: var(--real-estate);"></div>
-                                <div class="bar-label">????????</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 50%; background-color: var(--volumex);"></div>
-                                <div class="bar-label">???????</div>
-                            </div>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--concentrix);"></div>
-                                <span>Concentrix</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--hsbc);"></div>
-                                <span>HSBC</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--real-estate);"></div>
-                                <span>Volume X ????????</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--volumex);"></div>
-                                <span>Volume X ???????</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chart-box">
-                        <div class="chart-title">????? ?????????</div>
-                        <div class="chart" id="applicantStatusChart">
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 70%; background-color: #f59e0b;"></div>
-                                <div class="bar-label">?? ????????</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 40%; background-color: #10b981;"></div>
-                                <div class="bar-label">??? ????????</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 20%; background-color: #ef4444;"></div>
-                                <div class="bar-label">?????</div>
-                            </div>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #f59e0b;"></div>
-                                <span>?? ????????</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #10b981;"></div>
-                                <span>??? ????????</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #ef4444;"></div>
-                                <span>?????</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- ???? ??????? -->
+            <div class="company-filter">
+                <div class="filter-option active" data-company="all">????</div>
+                <div class="filter-option" data-company="Concentrix">Concentrix</div>
+                <div class="filter-option" data-company="HSBC">HSBC</div>
+                <div class="filter-option" data-company="Volume X">Volume X</div>
             </div>
             
             <!-- ????? ????????? -->
@@ -1735,6 +1688,7 @@
                         <tr>
                             <th>???????</th>
                             <th>???????</th>
+                            <th>??????</th>
                             <th>??? ??????</th>
                             <th>??????</th>
                             <th>????? ???????</th>
@@ -2027,6 +1981,10 @@
                 '<i class="fas fa-eye-slash"></i>';
         });
         
+        // ???? ????? ???????
+        let applications = JSON.parse(localStorage.getItem('workwise_applications')) || [];
+        let currentApplicationId = null;
+        
         // ????? ?????
         const applicationForm = document.querySelector('.application-form');
         
@@ -2045,7 +2003,7 @@
             const email = document.getElementById('email').value || '??? ?????';
             const job = document.getElementById('jobPosition').value;
             const company = document.getElementById('jobCompany').value;
-            const notes = applicationForm.querySelector('textarea').value || '?? ???? ???????';
+            const notes = document.getElementById('notes').value || '?? ???? ???????';
             
             // ????? ??? ????
             const newApplication = {
@@ -2060,6 +2018,10 @@
                 status: 'pending',
                 audioUrl: audioPlayback.src
             };
+            
+            // ????? ????? ??? ???? ???????
+            applications.push(newApplication);
+            localStorage.setItem('workwise_applications', JSON.stringify(applications));
             
             // ????? ???????
             notification.style.display = 'block';
@@ -2089,6 +2051,7 @@
             if (password === 'workwise123456') {
                 showSection(dashboardSection);
                 loadApplications();
+                updateStats();
             } else {
                 alert('???? ?????? ??? ?????. ?????? ???????? ??? ????.');
             }
@@ -2099,6 +2062,33 @@
             if (confirm('?? ???? ????? ?????? ?? ???? ???????')) {
                 showSection(homeSection);
             }
+        });
+        
+        // ????? ??????????
+        function updateStats() {
+            document.getElementById('totalApplicants').textContent = applications.length;
+            
+            const concentrix = applications.filter(app => app.company === 'Concentrix').length;
+            const hsbc = applications.filter(app => app.company === 'HSBC').length;
+            const volumex = applications.filter(app => app.company === 'Volume X').length;
+            const realEstate = applications.filter(app => app.job.includes('??????')).length;
+            
+            document.getElementById('concentrixApplicants').textContent = concentrix;
+            document.getElementById('hsbcApplicants').textContent = hsbc;
+            document.getElementById('volumexApplicants').textContent = volumex;
+            document.getElementById('realEstateApplicants').textContent = realEstate;
+        }
+        
+        // ????? ??? ??????
+        const filterOptions = document.querySelectorAll('.filter-option');
+        filterOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                filterOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                const company = option.getAttribute('data-company');
+                loadApplications(company);
+            });
         });
         
         // ??? ?????? ???????
@@ -2127,15 +2117,17 @@
             });
         });
         
-        // ?????? ????????? (???? ?????? ?????)
-        let applications = [];
-        
-        // ????? ????????? ??? ??? ???? ??????
-        function loadApplications() {
+        // ????? ?????????
+        function loadApplications(company = 'all') {
             const applicantsTableBody = document.getElementById('applicantsTableBody');
             applicantsTableBody.innerHTML = '';
             
-            applications.forEach(app => {
+            let filteredApplications = applications;
+            if (company !== 'all') {
+                filteredApplications = applications.filter(app => app.company === company);
+            }
+            
+            filteredApplications.forEach(app => {
                 const row = document.createElement('tr');
                 
                 // ????? ???? ??????? ???????
@@ -2150,6 +2142,7 @@
                         </div>
                     </td>
                     <td>${app.job}</td>
+                    <td>${app.company}</td>
                     <td>${app.phone}</td>
                     <td><span class="status ${app.status}">${getStatusText(app.status)}</span></td>
                     <td>${app.date}</td>
@@ -2169,6 +2162,7 @@
             switch(status) {
                 case 'pending': return '?? ????????';
                 case 'reviewed': return '??? ????????';
+                case 'accepted': return '?????';
                 case 'rejected': return '?????';
                 default: return status;
             }
@@ -2181,8 +2175,8 @@
             document.getElementById('detail-job').textContent = application.job;
             document.getElementById('detail-company').textContent = application.company;
             document.getElementById('detail-date').textContent = application.date;
-            document.getElementById('detail-notes').textContent = application.notes;
             document.getElementById('detail-status').innerHTML = `<span class="status ${application.status}">${getStatusText(application.status)}</span>`;
+            document.getElementById('detail-notes').textContent = application.notes;
             
             if (application.audioUrl) {
                 document.getElementById('detail-audio').src = application.audioUrl;
@@ -2191,9 +2185,39 @@
             }
             
             applicantDetail.style.display = 'block';
+            currentApplicationId = application.id;
             
             // ??????? ??? ??? ????????
             applicantDetail.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // ????? ???? ?????
+        document.getElementById('acceptBtn').addEventListener('click', () => {
+            updateApplicationStatus('accepted');
+        });
+        
+        document.getElementById('rejectBtn').addEventListener('click', () => {
+            updateApplicationStatus('rejected');
+        });
+        
+        function updateApplicationStatus(status) {
+            if (!currentApplicationId) return;
+            
+            const index = applications.findIndex(app => app.id === currentApplicationId);
+            if (index !== -1) {
+                applications[index].status = status;
+                localStorage.setItem('workwise_applications', JSON.stringify(applications));
+                
+                // ????? ?????
+                document.getElementById('detail-status').innerHTML = `<span class="status ${status}">${getStatusText(status)}</span>`;
+                
+                // ????? ????? ???????
+                const currentCompany = document.querySelector('.filter-option.active').getAttribute('data-company');
+                loadApplications(currentCompany);
+                updateStats();
+                
+                alert(`?? ????? ???? ????? ???: ${getStatusText(status)}`);
+            }
         }
         
         // ????? ???????
