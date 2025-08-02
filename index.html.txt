@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Wise - ???? ??????? ??????</title>
+    <title>Work Wise - منصة التوظيف الذكية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -43,7 +43,7 @@
             position: relative;
         }
         
-        /* ???? ?????? */
+        /* شريط التنقل */
         .navbar {
             background: white;
             border-radius: 15px;
@@ -128,7 +128,7 @@
             transform: translateY(-2px);
         }
         
-        /* ??? ???????? */
+        /* قسم الرئيسية */
         .home-section {
             background: white;
             border-radius: 20px;
@@ -180,7 +180,7 @@
             line-height: 1.8;
         }
         
-        /* ???? ??????? */
+        /* فئات الوظائف */
         .categories {
             display: flex;
             justify-content: center;
@@ -207,7 +207,7 @@
             box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
         }
         
-        /* ?????? ??????? */
+        /* بطاقات الوظائف */
         .jobs-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -343,7 +343,7 @@
         }
         
         .requirements li::before {
-            content: "�";
+            content: "•";
             color: var(--primary);
             font-weight: bold;
             position: absolute;
@@ -370,7 +370,7 @@
             transform: translateY(-2px);
         }
         
-        /* ??? ??????? */
+        /* قسم التقديم */
         .application-section {
             background: white;
             border-radius: 20px;
@@ -560,7 +560,7 @@
             transform: translateY(-2px);
         }
         
-        /* ??? ???????? */
+        /* قسم الموظفين */
         .staff-section {
             background: white;
             border-radius: 20px;
@@ -642,7 +642,7 @@
             transform: translateY(-2px);
         }
         
-        /* ???? ???? ???????? */
+        /* لوحة تحكم الموظفين */
         .dashboard-section {
             background: white;
             border-radius: 20px;
@@ -719,7 +719,7 @@
             color: var(--dark);
         }
         
-        /* ????? ????????? */
+        /* قائمة المتقدمين */
         .applicants-section {
             background: white;
             border-radius: 15px;
@@ -783,7 +783,7 @@
             color: var(--gray);
         }
         
-        /* ???? ????????? */
+        /* جدول المتقدمين */
         .applicants-table {
             width: 100%;
             border-collapse: collapse;
@@ -869,7 +869,7 @@
             background: #e2e8f0;
         }
         
-        /* ?????? ??????? */
+        /* تفاصيل المتقدم */
         .applicant-detail {
             background: white;
             border-radius: 15px;
@@ -949,7 +949,7 @@
             color: var(--gray);
         }
         
-        /* ???? ????? */
+        /* مشغل الصوت */
         .voice-player {
             background: var(--staff-bg);
             border-radius: 15px;
@@ -1097,7 +1097,7 @@
             margin-bottom: 30px;
         }
         
-        /* ?????? ???????? */
+        /* الرسوم البيانية */
         .chart-container {
             background: white;
             border-radius: 15px;
@@ -1188,7 +1188,7 @@
             border-radius: 3px;
         }
         
-        /* ???? ??????? */
+        /* فلتر الشركات */
         .company-filter {
             display: flex;
             gap: 15px;
@@ -1278,7 +1278,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- ???? ?????? -->
+        <!-- شريط التنقل -->
         <nav class="navbar">
             <div class="logo">
                 <i class="fas fa-briefcase"></i>
@@ -1286,136 +1286,136 @@
             </div>
             
             <div class="nav-links">
-                <a href="#" class="active" id="homeLink"><i class="fas fa-home"></i> ????????</a>
-                <a href="#" id="jobsLink"><i class="fas fa-briefcase"></i> ???????</a>
-                <a href="#" id="applyLink"><i class="fas fa-file-alt"></i> ???????</a>
-                <a href="#" id="aboutLink"><i class="fas fa-info-circle"></i> ???</a>
+                <a href="#" class="active" id="homeLink"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="#" id="jobsLink"><i class="fas fa-briefcase"></i> الوظائف</a>
+                <a href="#" id="applyLink"><i class="fas fa-file-alt"></i> التقديم</a>
+                <a href="#" id="aboutLink"><i class="fas fa-info-circle"></i> عنا</a>
             </div>
             
             <button class="staff-login-btn" id="staffLoginBtn">
-                <i class="fas fa-lock"></i> ???? ????????
+                <i class="fas fa-lock"></i> دخول الموظفين
             </button>
         </nav>
         
-        <!-- ??? ???????? -->
+        <!-- قسم الرئيسية -->
         <section id="homeSection" class="home-section">
             <header>
                 <h1><i class="fas fa-briefcase"></i> Work Wise</h1>
-                <p>???? ??????? ?????? ???? ???? ?? ????? ?? ???? ????? ????????. ???? ?? ???? ??????? ?? ???? ??????? ?? ??????? ??????? ??????? ??? ??????.</p>
+                <p>منصة التوظيف الذكية التي تتيح لك البحث عن أفضل الفرص الوظيفية. نقدم لك أحدث الوظائف في كبرى الشركات مع إمكانية التقديم المباشر عبر المنصة.</p>
             </header>
             
-            <!-- ???? ??????? -->
+            <!-- فئات الوظائف -->
             <div class="categories">
-                <button class="category-btn active">???? ???????</button>
-                <button class="category-btn">????? ?????</button>
-                <button class="category-btn">???? ????</button>
-                <button class="category-btn">?? ????</button>
-                <button class="category-btn">???? ????</button>
+                <button class="category-btn active">جميع الوظائف</button>
+                <button class="category-btn">وظائف حديثة</button>
+                <button class="category-btn">أعلى راتب</button>
+                <button class="category-btn">عن بُعد</button>
+                <button class="category-btn">دوام جزئي</button>
             </div>
             
-            <!-- ????? ??????? -->
+            <!-- قائمة الوظائف -->
             <div class="jobs-container">
-                <!-- ????? Concentrix ?????????? -->
+                <!-- وظيفة Concentrix الإنجليزية -->
                 <div class="job-card concentrix">
                     <div class="job-header concentrix">
-                        <div class="job-type">???? ????</div>
-                        <h3>????? ???? ????? (??????????)</h3>
+                        <div class="job-type">دوام كامل</div>
+                        <h3>مندوب خدمة عملاء (الإنجليزية)</h3>
                         <p>Concentrix</p>
                     </div>
                     <div class="job-body">
                         <div class="job-details">
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>?????????/???????</span>
+                                <span>المهندسين/المعادي</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-money-bill-wave"></i>
-                                <span>14,000 - 19,000 ?.?</span>
+                                <span>14,000 - 19,000 ج.م</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-clock"></i>
-                                <span>9 ?????</span>
+                                <span>9 ساعات</span>
                             </div>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-list-check"></i> ?????????:</h4>
+                            <h4><i class="fas fa-list-check"></i> المتطلبات:</h4>
                             <ul>
-                                <li>????? ????? ?????????? (????? B2 ?? C1)</li>
-                                <li>???????? ???</li>
-                                <li>?????? ???</li>
+                                <li>إجادة اللغة الإنجليزية (مستوى B2 أو C1)</li>
+                                <li>الخريجين فقط</li>
+                                <li>مصريين فقط</li>
                             </ul>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-gift"></i> ???????:</h4>
+                            <h4><i class="fas fa-gift"></i> المزايا:</h4>
                             <ul>
-                                <li>??? ????? ?????</li>
-                                <li>????? ????? ?????</li>
-                                <li>????? ??? ???????? ??????</li>
-                                <li>????? ?????? (?????? ????)</li>
+                                <li>بدل نوبات ليلية</li>
+                                <li>تدريب مدفوع الأجر</li>
+                                <li>تأمين طبي واجتماعي إلزامي</li>
+                                <li>شفتات متغيرة (معظمها ليلي)</li>
                             </ul>
                         </div>
                         
-                        <button class="select-btn" data-job="????? ???? ????? (??????????)" data-company="Concentrix">
-                            <i class="fas fa-paper-plane"></i> ??????? ??? ???????
+                        <button class="select-btn" data-job="مندوب خدمة عملاء (الإنجليزية)" data-company="Concentrix">
+                            <i class="fas fa-paper-plane"></i> التقديم على الوظيفة
                         </button>
                     </div>
                 </div>
                 
-                <!-- ????? Concentrix ????????? -->
+                <!-- وظيفة Concentrix الألمانية -->
                 <div class="job-card concentrix">
                     <div class="job-header concentrix">
-                        <div class="job-type">???? ????</div>
-                        <h3>????? ???? ????? (?????????)</h3>
+                        <div class="job-type">دوام كامل</div>
+                        <h3>مندوب خدمة عملاء (الألمانية)</h3>
                         <p>Concentrix</p>
                     </div>
                     <div class="job-body">
                         <div class="job-details">
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>????? ???</span>
+                                <span>مدينة نصر</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-money-bill-wave"></i>
-                                <span>26,000 - 34,000 ?.?</span>
+                                <span>26,000 - 34,000 ج.م</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-clock"></i>
-                                <span>9 ?????</span>
+                                <span>9 ساعات</span>
                             </div>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-list-check"></i> ?????????:</h4>
+                            <h4><i class="fas fa-list-check"></i> المتطلبات:</h4>
                             <ul>
-                                <li>????? ????? ????????? (B2 ?? C1)</li>
-                                <li>???????? ?????</li>
-                                <li>???????? ??? - ?????? ???</li>
+                                <li>إجادة اللغة الألمانية (B2 أو C1)</li>
+                                <li>إنجليزية بسيطة</li>
+                                <li>الخريجين فقط - مصريين فقط</li>
                             </ul>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-gift"></i> ???????:</h4>
+                            <h4><i class="fas fa-gift"></i> المزايا:</h4>
                             <ul>
-                                <li>?????? ????? 5,000 ????</li>
-                                <li>????? ????? ?????</li>
-                                <li>????? ??? ???????? ??????</li>
-                                <li>????? ????? ??????? ??? ??? ??????</li>
+                                <li>مكافأة ترحيب 5,000 جنيه</li>
+                                <li>تدريب مدفوع الأجر</li>
+                                <li>تأمين طبي واجتماعي إلزامي</li>
+                                <li>توفير وسيلة مواصلات حتى باب المنزل</li>
                             </ul>
                         </div>
                         
-                        <button class="select-btn" data-job="????? ???? ????? (?????????)" data-company="Concentrix">
-                            <i class="fas fa-paper-plane"></i> ??????? ??? ???????
+                        <button class="select-btn" data-job="مندوب خدمة عملاء (الألمانية)" data-company="Concentrix">
+                            <i class="fas fa-paper-plane"></i> التقديم على الوظيفة
                         </button>
                     </div>
                 </div>
                 
-                <!-- ????? HSBC -->
+                <!-- وظيفة HSBC -->
                 <div class="job-card hsbc">
                     <div class="job-header hsbc">
-                        <div class="job-type">???? ????</div>
-                        <h3>???? ???? ?????</h3>
+                        <div class="job-type">دوام كامل</div>
+                        <h3>مركز خدمة عملاء</h3>
                         <p>HSBC</p>
                     </div>
                     <div class="job-body">
@@ -1426,152 +1426,152 @@
                             </div>
                             <div class="detail">
                                 <i class="fas fa-money-bill-wave"></i>
-                                <span>9,000 - 15,700 ?.?</span>
+                                <span>9,000 - 15,700 ج.م</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-clock"></i>
-                                <span>9 ?????</span>
+                                <span>9 ساعات</span>
                             </div>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-list-check"></i> ?????????:</h4>
+                            <h4><i class="fas fa-list-check"></i> المتطلبات:</h4>
                             <ul>
-                                <li>????? ????? ?????????? (????? B2)</li>
-                                <li>???? ?????? ????? 35 ???</li>
-                                <li>?????? ??? - ?????? ???</li>
-                                <li>?? ????? ???? (??? ???? ????? ??? ??????)</li>
+                                <li>إجادة اللغة الإنجليزية (مستوى B2)</li>
+                                <li>الحد الأقصى للعمر 35 سنة</li>
+                                <li>خريجين فقط - مصريين فقط</li>
+                                <li>لا يشترط خبرة (بحد أقصى سنتين بعد التخرج)</li>
                             </ul>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-gift"></i> ???????:</h4>
+                            <h4><i class="fas fa-gift"></i> المزايا:</h4>
                             <ul>
-                                <li>????? ????? ?????</li>
-                                <li>????? ??? ????????</li>
-                                <li>????? ? Bonus</li>
-                                <li>????? ?????</li>
-                                <li>????? ???????</li>
+                                <li>تدريب مدفوع الأجر</li>
+                                <li>تأمين طبي واجتماعي</li>
+                                <li>حوافز و Bonus</li>
+                                <li>ترقية دورية</li>
+                                <li>توفير مواصلات</li>
                             </ul>
                         </div>
                         
-                        <button class="select-btn" data-job="???? ???? ?????" data-company="HSBC">
-                            <i class="fas fa-paper-plane"></i> ??????? ??? ???????
+                        <button class="select-btn" data-job="مركز خدمة عملاء" data-company="HSBC">
+                            <i class="fas fa-paper-plane"></i> التقديم على الوظيفة
                         </button>
                     </div>
                 </div>
                 
-                <!-- ????? Volume X ???????? -->
+                <!-- وظيفة Volume X العقارية -->
                 <div class="job-card real-estate">
                     <div class="job-header real-estate">
-                        <div class="job-type">?? ???</div>
-                        <h3>????? ?????? ?????? (Acquisition)</h3>
+                        <div class="job-type">عن بعد</div>
+                        <h3>مندوب مبيعات عقارات (Acquisition)</h3>
                         <p>Volume X</p>
                     </div>
                     <div class="job-body">
                         <div class="job-details">
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>?? ???</span>
+                                <span>عن بعد</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-money-bill-wave"></i>
-                                <span>$4.2/???? + ?????</span>
+                                <span>$4.2/ساعة + عمولة</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-clock"></i>
-                                <span>40 ????/?????</span>
+                                <span>40 ساعة/أسبوع</span>
                             </div>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-list-check"></i> ?????????:</h4>
+                            <h4><i class="fas fa-list-check"></i> المتطلبات:</h4>
                             <ul>
-                                <li>????? ????? ?????????? (????? B2)</li>
-                                <li>???? 6 ???? ?? ???????? (???? ?? ????????)</li>
-                                <li>????? ???? ?? ????????? ??????? ?????? ????????</li>
-                                <li>????? ?????? ?????? ??????? ????? ?????? ???</li>
+                                <li>إجادة اللغة الإنجليزية (مستوى B2)</li>
+                                <li>خبرة 6 أشهر في المبيعات (يفضل في العقارات)</li>
+                                <li>خلفية قوية في المكالمات الباردة وتحديد المواعيد</li>
+                                <li>اتصال إنترنت مستقر، كمبيوتر شخصي، وسماعة رأس</li>
                             </ul>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-gift"></i> ???????:</h4>
+                            <h4><i class="fas fa-gift"></i> المزايا:</h4>
                             <ul>
-                                <li>??? ??? ?? ??????</li>
-                                <li>???? ?????? + ?????</li>
-                                <li>????? ????? (????? ??????)</li>
-                                <li>???? ??????? ??? ????? ??????</li>
-                                <li>?????? ??? ???? ??? ??????? ????????</li>
+                                <li>عمل مرن من المنزل</li>
+                                <li>راتب أسبوعي + عمولة</li>
+                                <li>تدريب مجاني (شهادة معتمدة)</li>
+                                <li>فرصة للترقية إلى مناصب قيادية</li>
+                                <li>مواعيد عمل مرنة وفق التوقيت الأمريكي</li>
                             </ul>
                         </div>
                         
                         <div class="requirements">
-                            <h4><i class="fas fa-building"></i> ???? ?????:</h4>
+                            <h4><i class="fas fa-building"></i> مجال العمل:</h4>
                             <ul>
-                                <li>???????? ??????? ?????????</li>
-                                <li>?????? ??????? ????????? ?? ???? PPC</li>
-                                <li>??? ?????? ??????? ??????</li>
-                                <li>???? ?????? ?? ??????? ?????????</li>
+                                <li>العقارات السكنية والتجارية</li>
+                                <li>متابعة العملاء المحتملين من خلال PPC</li>
+                                <li>جمع وتوثيق معلومات الملاك</li>
+                                <li>بناء علاقات مع العملاء المحتملين</li>
                             </ul>
                         </div>
                         
-                        <button class="select-btn" data-job="????? ?????? ?????? (Acquisition)" data-company="Volume X">
-                            <i class="fas fa-paper-plane"></i> ??????? ??? ???????
+                        <button class="select-btn" data-job="مندوب مبيعات عقارات (Acquisition)" data-company="Volume X">
+                            <i class="fas fa-paper-plane"></i> التقديم على الوظيفة
                         </button>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- ??? ??????? -->
+        <!-- قسم التقديم -->
         <section id="applicationSection" class="application-section">
-            <h2><i class="fas fa-file-alt"></i> ????? ??? ???????</h2>
+            <h2><i class="fas fa-file-alt"></i> تقديم على الوظيفة</h2>
             <form class="application-form">
                 <div class="form-group">
-                    <label for="fullName"><i class="fas fa-user"></i> ????? ???????</label>
+                    <label for="fullName"><i class="fas fa-user"></i> الاسم بالكامل</label>
                     <input type="text" id="fullName" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="phoneNumber"><i class="fas fa-phone"></i> ??? ??????</label>
+                    <label for="phoneNumber"><i class="fas fa-phone"></i> رقم الهاتف</label>
                     <input type="tel" id="phoneNumber" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="email"><i class="fas fa-envelope"></i> ?????? ??????????</label>
+                    <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
                     <input type="email" id="email">
                 </div>
                 
                 <div class="form-group">
-                    <label for="jobPosition"><i class="fas fa-briefcase"></i> ??????? ????????</label>
+                    <label for="jobPosition"><i class="fas fa-briefcase"></i> الوظيفة المختارة</label>
                     <input type="text" id="jobPosition" readonly>
                 </div>
                 
                 <div class="form-group">
-                    <label for="jobCompany"><i class="fas fa-building"></i> ??????</label>
+                    <label for="jobCompany"><i class="fas fa-building"></i> الشركة</label>
                     <input type="text" id="jobCompany" readonly>
                 </div>
                 
                 <div class="form-group full">
-                    <label><i class="fas fa-edit"></i> ???????</label>
-                    <textarea rows="3" placeholder="?????? ?? ?????? ????????..." id="notes"></textarea>
+                    <label><i class="fas fa-edit"></i> ملاحظات</label>
+                    <textarea rows="3" placeholder="أخبرنا عن خبراتك ومؤهلاتك..." id="notes"></textarea>
                 </div>
                 
                 <div class="form-group full">
                     <div class="voice-recorder">
                         <div class="recorder-header">
                             <div class="recorder-title">
-                                <i class="fas fa-microphone"></i> ????? ???? (?? ???? ????? ?????)
+                                <i class="fas fa-microphone"></i> تسجيل صوتي (حد أقصى دقيقة واحدة)
                             </div>
                             <div class="recorder-controls">
                                 <button type="button" class="recorder-btn" id="recordBtn">
-                                    <i class="fas fa-circle"></i> ??? ???????
+                                    <i class="fas fa-circle"></i> بدء التسجيل
                                 </button>
                                 <button type="button" class="recorder-btn stop" id="stopBtn" disabled>
-                                    <i class="fas fa-stop"></i> ????? ???????
+                                    <i class="fas fa-stop"></i> إيقاف التسجيل
                                 </button>
                                 <button type="button" class="recorder-btn delete" id="deleteBtn" disabled>
-                                    <i class="fas fa-trash"></i> ??? ???????
+                                    <i class="fas fa-trash"></i> مسح التسجيل
                                 </button>
                             </div>
                         </div>
@@ -1596,210 +1596,210 @@
                 </div>
                 
                 <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i> ????? ?????
+                    <i class="fas fa-paper-plane"></i> إرسال الطلب
                 </button>
             </form>
         </section>
         
-        <!-- ??? ???????? -->
+        <!-- قسم الموظفين -->
         <section id="staffSection" class="staff-section">
-            <h2><i class="fas fa-lock"></i> ???? ????????</h2>
-            <p>??? ??????? ????? ?????? ??????? ???. ?????? ????? ???? ?????? ?????? ??? ???? ??????.</p>
+            <h2><i class="fas fa-lock"></i> دخول الموظفين</h2>
+            <p>هذه المنطقة مخصصة لموظفي التوظيف فقط. الرجاء إدخال كلمة المرور للوصول إلى لوحة التحكم.</p>
             
             <div class="login-form">
                 <div class="password-input">
-                    <input type="password" id="password" placeholder="???? ???? ??????">
+                    <input type="password" id="password" placeholder="أدخل كلمة المرور">
                     <button class="password-toggle" id="passwordToggle">
                         <i class="fas fa-eye"></i>
                     </button>
                 </div>
                 
-                <button class="staff-btn" id="staffLogin">???? ????????</button>
+                <button class="staff-btn" id="staffLogin">دخول الموظفين</button>
             </div>
         </section>
         
-        <!-- ???? ???? ???????? -->
+        <!-- لوحة تحكم الموظفين -->
         <section id="dashboardSection" class="dashboard-section">
             <div class="dashboard-header">
-                <h2><i class="fas fa-tachometer-alt"></i> ???? ???? ????????</h2>
+                <h2><i class="fas fa-tachometer-alt"></i> لوحة تحكم الموظفين</h2>
                 <button class="staff-login-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> ????? ??????
+                    <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
                 </button>
             </div>
             
-            <!-- ???????? ????????? -->
+            <!-- إحصائيات التطبيقات -->
             <div class="stats-cards">
                 <div class="stat-card">
-                    <h3>?????? ?????????</h3>
+                    <h3>إجمالي المتقدمين</h3>
                     <div class="value" id="totalApplicants">0</div>
-                    <div class="trend"><i class="fas fa-arrow-up"></i> +18% ?? ??????? ??????</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +18% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card concentrix">
-                    <h3>?????? Concentrix</h3>
+                    <h3>متقدمو Concentrix</h3>
                     <div class="value" id="concentrixApplicants">0</div>
-                    <div class="trend"><i class="fas fa-arrow-up"></i> +8% ?? ??????? ??????</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +8% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card hsbc">
-                    <h3>?????? HSBC</h3>
+                    <h3>متقدمو HSBC</h3>
                     <div class="value" id="hsbcApplicants">0</div>
-                    <div class="trend"><i class="fas fa-arrow-down"></i> -3% ?? ??????? ??????</div>
+                    <div class="trend"><i class="fas fa-arrow-down"></i> -3% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card volumex">
-                    <h3>?????? Volume X</h3>
+                    <h3>متقدمو Volume X</h3>
                     <div class="value" id="volumexApplicants">0</div>
-                    <div class="trend"><i class="fas fa-arrow-up"></i> +22% ?? ??????? ??????</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +22% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card real-estate">
-                    <h3>?????? ????????</h3>
+                    <h3>متقدمو العقارات</h3>
                     <div class="value" id="realEstateApplicants">0</div>
-                    <div class="trend"><i class="fas fa-arrow-up"></i> +150% ?? ??????? ??????</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +150% عن الأسبوع الماضي</div>
                 </div>
             </div>
             
-            <!-- ???? ??????? -->
+            <!-- فلتر الشركات -->
             <div class="company-filter">
-                <div class="filter-option active" data-company="all">????</div>
+                <div class="filter-option active" data-company="all">الكل</div>
                 <div class="filter-option" data-company="Concentrix">Concentrix</div>
                 <div class="filter-option" data-company="HSBC">HSBC</div>
                 <div class="filter-option" data-company="Volume X">Volume X</div>
             </div>
             
-            <!-- ????? ????????? -->
+            <!-- قائمة المتقدمين -->
             <div class="applicants-section">
                 <div class="section-header">
-                    <h3><i class="fas fa-user-friends"></i> ????????? ?????</h3>
+                    <h3><i class="fas fa-user-friends"></i> المتقدمون الجدد</h3>
                     
                     <div class="controls">
                         <div class="search-box">
-                            <input type="text" id="searchInput" placeholder="???? ???? ???????...">
+                            <input type="text" id="searchInput" placeholder="ابحث باسم المتقدم...">
                             <i class="fas fa-search"></i>
                         </div>
-                        <button class="filter-btn"><i class="fas fa-filter"></i> ?????</button>
-                        <button class="export-btn"><i class="fas fa-file-export"></i> ?????</button>
+                        <button class="filter-btn"><i class="fas fa-filter"></i> تصفية</button>
+                        <button class="export-btn"><i class="fas fa-file-export"></i> تصدير</button>
                     </div>
                 </div>
                 
                 <table class="applicants-table">
                     <thead>
                         <tr>
-                            <th>???????</th>
-                            <th>???????</th>
-                            <th>??????</th>
-                            <th>??? ??????</th>
-                            <th>??????</th>
-                            <th>????? ???????</th>
-                            <th>?????????</th>
+                            <th>المتقدم</th>
+                            <th>الوظيفة</th>
+                            <th>الشركة</th>
+                            <th>رقم الهاتف</th>
+                            <th>الحالة</th>
+                            <th>تاريخ التقديم</th>
+                            <th>الإجراءات</th>
                         </tr>
                     </thead>
                     <tbody id="applicantsTableBody">
-                        <!-- ???? ????? ?????????? -->
+                        <!-- سيتم ملؤها ديناميكيًا -->
                     </tbody>
                 </table>
             </div>
             
-            <!-- ?????? ??????? -->
+            <!-- تفاصيل المتقدم -->
             <div class="applicant-detail" id="applicantDetail">
                 <div class="detail-header">
-                    <h3>?????? ???????</h3>
+                    <h3>تفاصيل المتقدم</h3>
                     <button class="close-btn" id="closeDetail"><i class="fas fa-times"></i></button>
                 </div>
                 
                 <div class="applicant-info">
                     <div class="info-card">
-                        <h4><i class="fas fa-user"></i> ????????? ???????</h4>
+                        <h4><i class="fas fa-user"></i> المعلومات الشخصية</h4>
                         <div class="info-row">
-                            <div class="info-label">????? ??????:</div>
+                            <div class="info-label">الاسم الكامل:</div>
                             <div class="info-value" id="detail-fullName">-</div>
                         </div>
                         <div class="info-row">
-                            <div class="info-label">??? ??????:</div>
+                            <div class="info-label">رقم الهاتف:</div>
                             <div class="info-value" id="detail-phone">-</div>
                         </div>
                         <div class="info-row">
-                            <div class="info-label">?????? ??????????:</div>
+                            <div class="info-label">البريد الإلكتروني:</div>
                             <div class="info-value" id="detail-email">-</div>
                         </div>
                     </div>
                     
                     <div class="info-card">
-                        <h4><i class="fas fa-briefcase"></i> ??????? ???????</h4>
+                        <h4><i class="fas fa-briefcase"></i> معلومات التقديم</h4>
                         <div class="info-row">
-                            <div class="info-label">???????:</div>
+                            <div class="info-label">الوظيفة:</div>
                             <div class="info-value" id="detail-job">-</div>
                         </div>
                         <div class="info-row">
-                            <div class="info-label">??????:</div>
+                            <div class="info-label">الشركة:</div>
                             <div class="info-value" id="detail-company">-</div>
                         </div>
                         <div class="info-row">
-                            <div class="info-label">????? ???????:</div>
+                            <div class="info-label">تاريخ التقديم:</div>
                             <div class="info-value" id="detail-date">-</div>
                         </div>
                         <div class="info-row">
-                            <div class="info-label">??????:</div>
+                            <div class="info-label">الحالة:</div>
                             <div class="info-value" id="detail-status">-</div>
                         </div>
                     </div>
                     
                     <div class="info-card">
-                        <h4><i class="fas fa-file-alt"></i> ??????? ???????</h4>
+                        <h4><i class="fas fa-file-alt"></i> ملاحظات المتقدم</h4>
                         <div class="info-row">
-                            <div class="info-label">????????:</div>
+                            <div class="info-label">ملاحظاته:</div>
                             <div class="info-value" id="detail-notes">-</div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- ???? ????? -->
+                <!-- مشغل الصوت -->
                 <div class="voice-player">
                     <div class="player-header">
-                        <h4><i class="fas fa-microphone-alt"></i> ??????? ?????? ???????</h4>
+                        <h4><i class="fas fa-microphone-alt"></i> التسجيل الصوتي للمتقدم</h4>
                         <div class="audio-controls">
-                            <button class="action-btn"><i class="fas fa-download"></i> ?????</button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i> ??????</button>
+                            <button class="action-btn"><i class="fas fa-download"></i> تحميل</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> مشاركة</button>
                         </div>
                     </div>
                     
                     <audio class="audio-player" controls id="detail-audio">
                         <source src="#" type="audio/mpeg">
-                        ??????? ?? ???? ????? ?????.
+                        المتصفح لا يدعم تشغيل الصوت.
                     </audio>
                 </div>
                 
-                <!-- ??????? ??????? -->
+                <!-- إجراءات المتقدم -->
                 <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
                     <button class="action-btn" style="background: var(--success); color: white;" id="acceptBtn">
-                        <i class="fas fa-check"></i> ???? ???????
+                        <i class="fas fa-check"></i> قبول المتقدم
                     </button>
                     <button class="action-btn" style="background: #ef4444; color: white;" id="rejectBtn">
-                        <i class="fas fa-times"></i> ??? ???????
+                        <i class="fas fa-times"></i> رفض المتقدم
                     </button>
                     <button class="action-btn" id="emailBtn">
-                        <i class="fas fa-envelope"></i> ????? ????
+                        <i class="fas fa-envelope"></i> إرسال بريد
                     </button>
                     <button class="action-btn" id="interviewBtn">
-                        <i class="fas fa-phone"></i> ????? ??????
+                        <i class="fas fa-phone"></i> جدولة مقابلة
                     </button>
                 </div>
             </div>
         </section>
         
-        <!-- ??? ??? -->
+        <!-- قسم عنا -->
         <section id="aboutSection" class="about-section">
             <div class="about-content">
-                <h2><i class="fas fa-info-circle"></i> ?? ???? Work Wise</h2>
+                <h2><i class="fas fa-info-circle"></i> عن شركة Work Wise</h2>
                 
                 <div class="ceo-info">
                     <div class="ceo-photo">
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <div class="ceo-details">
-                        <h3>Bishoy - ?????? ????????</h3>
-                        <p>???? ????? ???? Work Wise? ???? ?? ???? ??????? ???????? ??????? ?? ???? ?? 10 ????? ?? ?????? ?? ???? ???????.</p>
+                        <h3>Bishoy - الرئيس التنفيذي</h3>
+                        <p>مؤسس ورئيس شركة Work Wise، خبير في مجال التوظيف والموارد البشرية مع أكثر من 10 سنوات من الخبرة في مجال التوظيف.</p>
                         
                         <div class="social-links">
                             <a href="https://www.instagram.com/workwisegy?igsh=Y29uY2g0MmRpaHAx" target="_blank">
@@ -1813,21 +1813,21 @@
                 </div>
                 
                 <div class="company-info">
-                    <p>Work Wise ?? ???? ????? ????? ???? ??? ??? ???? ???????? ?? ???? ??????? ?? ????? ??????. ????? ??? 2020? ??? ????? ???? ?? 5000 ??? ?? ?????? ??? ????? ???????.</p>
-                    <p>??? ???? ??? ?? ??? ????? ???? ????? ?? ???? ????? ??????? ?????? ????? ?????? ?????? ??? ????? ?? ???? ?????? ??????.</p>
+                    <p>Work Wise هي منصة توظيف رائدة تهدف إلى ربط أفضل الكفاءات مع أفضل الشركات في السوق المصري. تأسست عام 2020، وقد ساعدت أكثر من 5000 شخص في العثور على وظائف أحلامهم.</p>
+                    <p>نحن نؤمن بأن كل شخص يستحق فرصة للعمل في مجال يناسب مهاراته وشغفه، ونسعى جاهدين لتوفير هذه الفرص من خلال منصتنا الذكية.</p>
                 </div>
             </div>
         </section>
         
         <footer>
-            <p>???? ?????? ?????? &copy; 2023 Work Wise - ???? ??????? ??????</p>
+            <p>جميع الحقوق محفوظة &copy; 2023 Work Wise - منصة التوظيف الذكية</p>
         </footer>
         
-        <div class="notification" id="notification">?? ????? ???? ?????!</div>
+        <div class="notification" id="notification">تم إرسال طلبك بنجاح!</div>
     </div>
 
     <script>
-        // ?????? ??? ???????
+        // التحكم بين الأقسام
         const homeSection = document.getElementById('homeSection');
         const applicationSection = document.getElementById('applicationSection');
         const staffSection = document.getElementById('staffSection');
@@ -1871,7 +1871,7 @@
             window.scrollTo(0, 0);
         }
         
-        // ?????? ????? ????????
+        // اختيار وظيفة والتقديم
         const selectBtns = document.querySelectorAll('.select-btn');
         const jobPositionInput = document.getElementById('jobPosition');
         const jobCompanyInput = document.getElementById('jobCompany');
@@ -1884,12 +1884,12 @@
                 jobCompanyInput.value = company;
                 showSection(applicationSection);
                 
-                // ??????? ??? ??????
+                // التمرير إلى الأعلى
                 applicationSection.scrollIntoView({ behavior: 'smooth' });
             });
         });
         
-        // ???? ?????
+        // مسجل الصوت
         const recordBtn = document.getElementById('recordBtn');
         const stopBtn = document.getElementById('stopBtn');
         const deleteBtn = document.getElementById('deleteBtn');
@@ -1902,9 +1902,9 @@
         let recording = false;
         let seconds = 0;
         let timerInterval;
-        const maxDuration = 60; // ????? ????? ??? ????
+        const maxDuration = 60; // دقيقة واحدة كحد أقصى
         
-        // ??? ???????
+        // بدء التسجيل
         recordBtn.addEventListener('click', async () => {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -1928,7 +1928,7 @@
                 stopBtn.disabled = false;
                 visualizer.style.display = 'flex';
                 
-                // ??? ??????
+                // بدء المؤقت
                 seconds = 0;
                 timerInterval = setInterval(() => {
                     seconds++;
@@ -1936,18 +1936,18 @@
                     const secs = seconds % 60;
                     timer.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
                     
-                    // ????? ??????? ???????? ??? ?????? ???? ??????
+                    // إيقاف التسجيل تلقائياً عند الوصول للحد الأقصى
                     if (seconds >= maxDuration) {
                         stopRecording();
                     }
                 }, 1000);
             } catch (err) {
-                alert('???? ?????? ??? ??????????. ???? ?????? ?? ?????????.');
+                alert('تعذر الوصول إلى الميكروفون. يرجى التحقق من الإعدادات.');
                 console.error('Microphone access error:', err);
             }
         });
         
-        // ????? ???????
+        // إيقاف التسجيل
         stopBtn.addEventListener('click', stopRecording);
         
         function stopRecording() {
@@ -1961,7 +1961,7 @@
             }
         }
         
-        // ??? ???????
+        // مسح التسجيل
         deleteBtn.addEventListener('click', () => {
             audioPlayback.src = '';
             audioPlayback.style.display = 'none';
@@ -1969,7 +1969,7 @@
             audioChunks = [];
         });
         
-        // ?????/????? ???? ??????
+        // إظهار/إخفاء كلمة المرور
         const passwordToggle = document.getElementById('passwordToggle');
         const passwordInput = document.getElementById('password');
         
@@ -1981,31 +1981,31 @@
                 '<i class="fas fa-eye-slash"></i>';
         });
         
-        // ???? ????? ???????
+        // نظام تخزين الطلبات
         let applications = JSON.parse(localStorage.getItem('workwise_applications')) || [];
         let currentApplicationId = null;
         
-        // ????? ?????
+        // إرسال الطلب
         const applicationForm = document.querySelector('.application-form');
         
         applicationForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // ?????? ?? ???? ????? ????
+            // التحقق من وجود تسجيل صوتي
             if (!audioPlayback.src) {
-                alert('?????? ????? ????? ???? ??? ???????');
+                alert('الرجاء إضافة تسجيل صوتي قبل الإرسال');
                 return;
             }
             
-            // ?????? ??? ?????? ???????
+            // الحصول على بيانات النموذج
             const fullName = document.getElementById('fullName').value;
             const phone = document.getElementById('phoneNumber').value;
-            const email = document.getElementById('email').value || '??? ?????';
+            const email = document.getElementById('email').value || 'غير متوفر';
             const job = document.getElementById('jobPosition').value;
             const company = document.getElementById('jobCompany').value;
-            const notes = document.getElementById('notes').value || '?? ???? ???????';
+            const notes = document.getElementById('notes').value || 'لا توجد ملاحظات';
             
-            // ????? ??? ????
+            // إنشاء طلب جديد
             const newApplication = {
                 id: Date.now(),
                 fullName,
@@ -2019,19 +2019,19 @@
                 audioUrl: audioPlayback.src
             };
             
-            // ????? ????? ??? ???? ???????
+            // إضافة الطلب إلى نظام التخزين
             applications.push(newApplication);
             localStorage.setItem('workwise_applications', JSON.stringify(applications));
             
-            // ????? ???????
+            // إظهار الإشعار
             notification.style.display = 'block';
-            notification.textContent = '?? ????? ???? ?????! ???? ??????? ?? ??? ???? ???????.';
+            notification.textContent = 'تم إرسال طلبك بنجاح! سيتم مراجعته من قبل فريق التوظيف.';
             
             setTimeout(() => {
                 notification.style.display = 'none';
             }, 5000);
             
-            // ????? ????? ???????
+            // إعادة تعيين النموذج
             setTimeout(() => {
                 applicationForm.reset();
                 audioPlayback.style.display = 'none';
@@ -2043,35 +2043,35 @@
             }, 3000);
         });
         
-        // ???? ????????
+        // دخول الموظفين
         document.getElementById('staffLogin').addEventListener('click', () => {
             const password = passwordInput.value;
             
-            // ???? ??????: workwise123456
+            // كلمة المرور: workwise123456
             if (password === 'workwise123456') {
                 showSection(dashboardSection);
                 loadApplications();
                 updateStats();
             } else {
-                alert('???? ?????? ??? ?????. ?????? ???????? ??? ????.');
+                alert('كلمة المرور غير صحيحة. الرجاء المحاولة مرة أخرى.');
             }
         });
         
-        // ????? ???? ????????
+        // تسجيل خروج الموظفين
         document.getElementById('logoutBtn').addEventListener('click', () => {
-            if (confirm('?? ???? ????? ?????? ?? ???? ???????')) {
+            if (confirm('هل تريد تسجيل الخروج من لوحة التحكم؟')) {
                 showSection(homeSection);
             }
         });
         
-        // ????? ??????????
+        // تحديث الإحصائيات
         function updateStats() {
             document.getElementById('totalApplicants').textContent = applications.length;
             
             const concentrix = applications.filter(app => app.company === 'Concentrix').length;
             const hsbc = applications.filter(app => app.company === 'HSBC').length;
             const volumex = applications.filter(app => app.company === 'Volume X').length;
-            const realEstate = applications.filter(app => app.job.includes('??????')).length;
+            const realEstate = applications.filter(app => app.job.includes('عقارات')).length;
             
             document.getElementById('concentrixApplicants').textContent = concentrix;
             document.getElementById('hsbcApplicants').textContent = hsbc;
@@ -2079,7 +2079,7 @@
             document.getElementById('realEstateApplicants').textContent = realEstate;
         }
         
-        // ????? ??? ??????
+        // فلترة حسب الشركة
         const filterOptions = document.querySelectorAll('.filter-option');
         filterOptions.forEach(option => {
             option.addEventListener('click', () => {
@@ -2091,7 +2091,7 @@
             });
         });
         
-        // ??? ?????? ???????
+        // عرض تفاصيل المتقدم
         const applicantDetail = document.getElementById('applicantDetail');
         const closeDetail = document.getElementById('closeDetail');
         
@@ -2099,7 +2099,7 @@
             applicantDetail.style.display = 'none';
         });
         
-        // ??? ?????????
+        // بحث المتقدمين
         const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
@@ -2117,7 +2117,7 @@
             });
         });
         
-        // ????? ?????????
+        // تحميل المتقدمين
         function loadApplications(company = 'all') {
             const applicantsTableBody = document.getElementById('applicantsTableBody');
             applicantsTableBody.innerHTML = '';
@@ -2130,14 +2130,14 @@
             filteredApplications.forEach(app => {
                 const row = document.createElement('tr');
                 
-                // ????? ???? ??????? ???????
+                // توليد صورة عشوائية للمتقدم
                 const randomId = Math.floor(Math.random() * 100);
                 const gender = Math.random() > 0.5 ? 'men' : 'women';
                 
                 row.innerHTML = `
                     <td>
                         <div class="applicant-name">
-                            <img src="https://randomuser.me/api/portraits/${gender}/${randomId}.jpg" alt="???? ???????">
+                            <img src="https://randomuser.me/api/portraits/${gender}/${randomId}.jpg" alt="صورة المتقدم">
                             <span>${app.fullName}</span>
                         </div>
                     </td>
@@ -2146,12 +2146,12 @@
                     <td>${app.phone}</td>
                     <td><span class="status ${app.status}">${getStatusText(app.status)}</span></td>
                     <td>${app.date}</td>
-                    <td><button class="action-btn view-btn" data-id="${app.id}"><i class="fas fa-eye"></i> ???</button></td>
+                    <td><button class="action-btn view-btn" data-id="${app.id}"><i class="fas fa-eye"></i> عرض</button></td>
                 `;
                 
                 applicantsTableBody.appendChild(row);
                 
-                // ????? ????? ??????? ??? ?????
+                // إضافة مستمع الأحداث لزر العرض
                 row.querySelector('.view-btn').addEventListener('click', () => {
                     showApplicationDetails(app);
                 });
@@ -2160,10 +2160,10 @@
         
         function getStatusText(status) {
             switch(status) {
-                case 'pending': return '?? ????????';
-                case 'reviewed': return '??? ????????';
-                case 'accepted': return '?????';
-                case 'rejected': return '?????';
+                case 'pending': return 'في الانتظار';
+                case 'reviewed': return 'قيد المراجعة';
+                case 'accepted': return 'مقبول';
+                case 'rejected': return 'مرفوض';
                 default: return status;
             }
         }
@@ -2171,7 +2171,7 @@
         function showApplicationDetails(application) {
             document.getElementById('detail-fullName').textContent = application.fullName;
             document.getElementById('detail-phone').textContent = application.phone;
-            document.getElementById('detail-email').textContent = application.email || '??? ?????';
+            document.getElementById('detail-email').textContent = application.email || 'غير متوفر';
             document.getElementById('detail-job').textContent = application.job;
             document.getElementById('detail-company').textContent = application.company;
             document.getElementById('detail-date').textContent = application.date;
@@ -2187,11 +2187,11 @@
             applicantDetail.style.display = 'block';
             currentApplicationId = application.id;
             
-            // ??????? ??? ??? ????????
+            // التمرير إلى قسم التفاصيل
             applicantDetail.scrollIntoView({ behavior: 'smooth' });
         }
         
-        // ????? ???? ?????
+        // تغيير حالة الطلب
         document.getElementById('acceptBtn').addEventListener('click', () => {
             updateApplicationStatus('accepted');
         });
@@ -2208,19 +2208,19 @@
                 applications[index].status = status;
                 localStorage.setItem('workwise_applications', JSON.stringify(applications));
                 
-                // ????? ?????
+                // تحديث العرض
                 document.getElementById('detail-status').innerHTML = `<span class="status ${status}">${getStatusText(status)}</span>`;
                 
-                // ????? ????? ???????
+                // إعادة تحميل القائمة
                 const currentCompany = document.querySelector('.filter-option.active').getAttribute('data-company');
                 loadApplications(currentCompany);
                 updateStats();
                 
-                alert(`?? ????? ???? ????? ???: ${getStatusText(status)}`);
+                alert(`تم تحديث حالة الطلب إلى: ${getStatusText(status)}`);
             }
         }
         
-        // ????? ???????
+        // تهيئة التطبيق
         document.addEventListener('DOMContentLoaded', () => {
             showSection(homeSection);
         });
