@@ -842,6 +842,11 @@
             color: #10b981;
         }
         
+        .status.accepted {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
         .status.rejected {
             background: #fef2f2;
             color: #ef4444;
@@ -1181,6 +1186,27 @@
             width: 15px;
             height: 15px;
             border-radius: 3px;
+        }
+        
+        /* فلتر الشركات */
+        .company-filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-option {
+            padding: 8px 15px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-option.active {
+            background: var(--primary);
+            color: white;
         }
         
         @media (max-width: 768px) {
@@ -1528,7 +1554,7 @@
                 
                 <div class="form-group full">
                     <label><i class="fas fa-edit"></i> ملاحظات</label>
-                    <textarea rows="3" placeholder="أخبرنا عن خبراتك ومؤهلاتك..."></textarea>
+                    <textarea rows="3" placeholder="أخبرنا عن خبراتك ومؤهلاتك..." id="notes"></textarea>
                 </div>
                 
                 <div class="form-group full">
@@ -1605,114 +1631,41 @@
             <div class="stats-cards">
                 <div class="stat-card">
                     <h3>إجمالي المتقدمين</h3>
-                    <div class="value">34</div>
+                    <div class="value" id="totalApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +18% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card concentrix">
                     <h3>متقدمو Concentrix</h3>
-                    <div class="value">12</div>
+                    <div class="value" id="concentrixApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +8% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card hsbc">
                     <h3>متقدمو HSBC</h3>
-                    <div class="value">6</div>
+                    <div class="value" id="hsbcApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-down"></i> -3% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card volumex">
                     <h3>متقدمو Volume X</h3>
-                    <div class="value">6</div>
+                    <div class="value" id="volumexApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +22% عن الأسبوع الماضي</div>
                 </div>
                 
                 <div class="stat-card real-estate">
                     <h3>متقدمو العقارات</h3>
-                    <div class="value">10</div>
+                    <div class="value" id="realEstateApplicants">0</div>
                     <div class="trend"><i class="fas fa-arrow-up"></i> +150% عن الأسبوع الماضي</div>
                 </div>
             </div>
             
-            <!-- الرسوم البيانية -->
-            <div class="chart-container">
-                <div class="chart-header">
-                    <h3><i class="fas fa-chart-bar"></i> إحصائيات التقديمات</h3>
-                </div>
-                
-                <div class="chart-wrapper">
-                    <div class="chart-box">
-                        <div class="chart-title">الوظائف الأكثر طلباً</div>
-                        <div class="chart" id="popularJobsChart">
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 80%; background-color: var(--concentrix);"></div>
-                                <div class="bar-label">خدمة العملاء</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 60%; background-color: var(--hsbc);"></div>
-                                <div class="bar-label">مركز اتصالات</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 90%; background-color: var(--real-estate);"></div>
-                                <div class="bar-label">العقارات</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 50%; background-color: var(--volumex);"></div>
-                                <div class="bar-label">الترجمة</div>
-                            </div>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--concentrix);"></div>
-                                <span>Concentrix</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--hsbc);"></div>
-                                <span>HSBC</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--real-estate);"></div>
-                                <span>Volume X العقارية</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: var(--volumex);"></div>
-                                <span>Volume X الترجمة</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chart-box">
-                        <div class="chart-title">حالات المتقدمين</div>
-                        <div class="chart" id="applicantStatusChart">
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 70%; background-color: #f59e0b;"></div>
-                                <div class="bar-label">في الانتظار</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 40%; background-color: #10b981;"></div>
-                                <div class="bar-label">قيد المراجعة</div>
-                            </div>
-                            <div class="bar-container">
-                                <div class="chart-bar" style="height: 20%; background-color: #ef4444;"></div>
-                                <div class="bar-label">مرفوض</div>
-                            </div>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #f59e0b;"></div>
-                                <span>في الانتظار</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #10b981;"></div>
-                                <span>قيد المراجعة</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #ef4444;"></div>
-                                <span>مرفوض</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- فلتر الشركات -->
+            <div class="company-filter">
+                <div class="filter-option active" data-company="all">الكل</div>
+                <div class="filter-option" data-company="Concentrix">Concentrix</div>
+                <div class="filter-option" data-company="HSBC">HSBC</div>
+                <div class="filter-option" data-company="Volume X">Volume X</div>
             </div>
             
             <!-- قائمة المتقدمين -->
@@ -1735,6 +1688,7 @@
                         <tr>
                             <th>المتقدم</th>
                             <th>الوظيفة</th>
+                            <th>الشركة</th>
                             <th>رقم الهاتف</th>
                             <th>الحالة</th>
                             <th>تاريخ التقديم</th>
@@ -2027,6 +1981,10 @@
                 '<i class="fas fa-eye-slash"></i>';
         });
         
+        // نظام تخزين الطلبات
+        let applications = JSON.parse(localStorage.getItem('workwise_applications')) || [];
+        let currentApplicationId = null;
+        
         // إرسال الطلب
         const applicationForm = document.querySelector('.application-form');
         
@@ -2045,7 +2003,7 @@
             const email = document.getElementById('email').value || 'غير متوفر';
             const job = document.getElementById('jobPosition').value;
             const company = document.getElementById('jobCompany').value;
-            const notes = applicationForm.querySelector('textarea').value || 'لا توجد ملاحظات';
+            const notes = document.getElementById('notes').value || 'لا توجد ملاحظات';
             
             // إنشاء طلب جديد
             const newApplication = {
@@ -2060,6 +2018,10 @@
                 status: 'pending',
                 audioUrl: audioPlayback.src
             };
+            
+            // إضافة الطلب إلى نظام التخزين
+            applications.push(newApplication);
+            localStorage.setItem('workwise_applications', JSON.stringify(applications));
             
             // إظهار الإشعار
             notification.style.display = 'block';
@@ -2089,6 +2051,7 @@
             if (password === 'workwise123456') {
                 showSection(dashboardSection);
                 loadApplications();
+                updateStats();
             } else {
                 alert('كلمة المرور غير صحيحة. الرجاء المحاولة مرة أخرى.');
             }
@@ -2099,6 +2062,33 @@
             if (confirm('هل تريد تسجيل الخروج من لوحة التحكم؟')) {
                 showSection(homeSection);
             }
+        });
+        
+        // تحديث الإحصائيات
+        function updateStats() {
+            document.getElementById('totalApplicants').textContent = applications.length;
+            
+            const concentrix = applications.filter(app => app.company === 'Concentrix').length;
+            const hsbc = applications.filter(app => app.company === 'HSBC').length;
+            const volumex = applications.filter(app => app.company === 'Volume X').length;
+            const realEstate = applications.filter(app => app.job.includes('عقارات')).length;
+            
+            document.getElementById('concentrixApplicants').textContent = concentrix;
+            document.getElementById('hsbcApplicants').textContent = hsbc;
+            document.getElementById('volumexApplicants').textContent = volumex;
+            document.getElementById('realEstateApplicants').textContent = realEstate;
+        }
+        
+        // فلترة حسب الشركة
+        const filterOptions = document.querySelectorAll('.filter-option');
+        filterOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                filterOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                const company = option.getAttribute('data-company');
+                loadApplications(company);
+            });
         });
         
         // عرض تفاصيل المتقدم
@@ -2127,15 +2117,17 @@
             });
         });
         
-        // بيانات المتقدمين (بدون بيانات وهمية)
-        let applications = [];
-        
-        // تحميل المتقدمين عند فتح لوحة التحكم
-        function loadApplications() {
+        // تحميل المتقدمين
+        function loadApplications(company = 'all') {
             const applicantsTableBody = document.getElementById('applicantsTableBody');
             applicantsTableBody.innerHTML = '';
             
-            applications.forEach(app => {
+            let filteredApplications = applications;
+            if (company !== 'all') {
+                filteredApplications = applications.filter(app => app.company === company);
+            }
+            
+            filteredApplications.forEach(app => {
                 const row = document.createElement('tr');
                 
                 // توليد صورة عشوائية للمتقدم
@@ -2150,6 +2142,7 @@
                         </div>
                     </td>
                     <td>${app.job}</td>
+                    <td>${app.company}</td>
                     <td>${app.phone}</td>
                     <td><span class="status ${app.status}">${getStatusText(app.status)}</span></td>
                     <td>${app.date}</td>
@@ -2169,6 +2162,7 @@
             switch(status) {
                 case 'pending': return 'في الانتظار';
                 case 'reviewed': return 'قيد المراجعة';
+                case 'accepted': return 'مقبول';
                 case 'rejected': return 'مرفوض';
                 default: return status;
             }
@@ -2181,8 +2175,8 @@
             document.getElementById('detail-job').textContent = application.job;
             document.getElementById('detail-company').textContent = application.company;
             document.getElementById('detail-date').textContent = application.date;
-            document.getElementById('detail-notes').textContent = application.notes;
             document.getElementById('detail-status').innerHTML = `<span class="status ${application.status}">${getStatusText(application.status)}</span>`;
+            document.getElementById('detail-notes').textContent = application.notes;
             
             if (application.audioUrl) {
                 document.getElementById('detail-audio').src = application.audioUrl;
@@ -2191,9 +2185,39 @@
             }
             
             applicantDetail.style.display = 'block';
+            currentApplicationId = application.id;
             
             // التمرير إلى قسم التفاصيل
             applicantDetail.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // تغيير حالة الطلب
+        document.getElementById('acceptBtn').addEventListener('click', () => {
+            updateApplicationStatus('accepted');
+        });
+        
+        document.getElementById('rejectBtn').addEventListener('click', () => {
+            updateApplicationStatus('rejected');
+        });
+        
+        function updateApplicationStatus(status) {
+            if (!currentApplicationId) return;
+            
+            const index = applications.findIndex(app => app.id === currentApplicationId);
+            if (index !== -1) {
+                applications[index].status = status;
+                localStorage.setItem('workwise_applications', JSON.stringify(applications));
+                
+                // تحديث العرض
+                document.getElementById('detail-status').innerHTML = `<span class="status ${status}">${getStatusText(status)}</span>`;
+                
+                // إعادة تحميل القائمة
+                const currentCompany = document.querySelector('.filter-option.active').getAttribute('data-company');
+                loadApplications(currentCompany);
+                updateStats();
+                
+                alert(`تم تحديث حالة الطلب إلى: ${getStatusText(status)}`);
+            }
         }
         
         // تهيئة التطبيق
